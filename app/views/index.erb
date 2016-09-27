@@ -30,7 +30,7 @@
         <h3><%= @post_whale[:humanized_time_ago] %></h3>
     </div>
     <a class="photo" href="#">
-        <img src="<% @post_whale[:photo_url] %>" alt="post from <%= @post_whale[:username] %>">
+        <img src="<%= @post_whale[:photo_url] %>" alt="post from <%= @post_whale[:username] %>">
     </a>
     <div class="actions">
         <%= @post_whale[:like_count] %> likes
@@ -39,7 +39,7 @@
         <ul class="comments">
             <li>
                 <p>
-                <%= @post_whale[:comments][0][:username] %> <%= @post_whale[:comments][0][:text] %>
+                <%= @post_whale[:comments][0][:username] %>: <%= @post_whale[:comments][0][:text] %>
                 </p>
             </li>
         </ul>
@@ -60,7 +60,7 @@
         <ul class="comments">
             <li>
                 <p>
-                <%= @post_marlin[:comments][0][:username] %> <%= @post_marlin[:comments][0][:text] %>
+                <%= @post_marlin[:comments][0][:username] %>: <%= @post_marlin[:comments][0][:text] %>
                 </p>
             </li>
         </ul>
